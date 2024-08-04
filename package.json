@@ -1,6 +1,6 @@
 {
   "name": "prep-aavits",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A starter for any custom project of mine",
   "type": "module",
   "main": "index.js",
