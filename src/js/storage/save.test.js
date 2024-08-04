@@ -1,4 +1,4 @@
-import { save } from './store.js';
+import { save } from './save.js';
 
 describe('save', () => {
   let key;
