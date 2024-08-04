@@ -13,7 +13,7 @@ import { save } from '../storage/save.js';
  * @returns {Promise<Object>} A promise that resolves to the user profile if the login is successful.
  * @throws {Error} If the login request fails, an error with the response status is thrown.
  */
-export async function loginUser(email, password) {
+export async function login(email, password) {
   const response = await fetch('/', {
     headers: {
       'Content-Type': 'application/json; charset=UTF-8',
