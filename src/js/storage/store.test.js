@@ -1,4 +1,4 @@
-import { save } from './store.mjs';
+import { save } from './store.js';
 
 describe('save', () => {
   beforeEach(() => {
