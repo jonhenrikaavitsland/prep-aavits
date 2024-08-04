@@ -10,7 +10,7 @@ describe('save', () => {
       clear: jest.fn(),
     };
 
-    setItemSpy = jest.spyOn(global.localStorage, 'setIem');
+    setItemSpy = jest.spyOn(global.localStorage, 'setItem');
 
     jest.clearAllMocks();
   });
