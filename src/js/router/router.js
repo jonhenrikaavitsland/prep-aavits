@@ -1,8 +1,11 @@
 /**
- * The function loads a specific page based on what page the user is currently on.
- * @returns loads a specific JS document.
+ * Handles client-side routing based on the current location pathname.
+ *
+ * This function checks the current URL's pathname and dynamically imports
+ * the corresponding JavaScript module for the page.
+ *
+ * @returns {Promise<Module>} A promise that resolves to the imported module for the corresponding page.
  */
-
 export function router() {
   switch (location.pathname) {
     case '/':
