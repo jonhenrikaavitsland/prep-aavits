@@ -1,17 +1,26 @@
 import { save } from './store.js';
 
 describe('save', () => {
+  let setItemSpy;
+
   beforeEach(() => {
+    global.localStorage = {
+      setItem: jest.fn(),
+      getItem: jest.fn(),
+      clear: jest.fn(),
+    };
+
+    setItemSpy = jest.spyOn(global.localStorage, 'setIem');
+
     jest.clearAllMocks();
-    jest.spyOn(Storage.prototype, 'setItem');
   });
 
   it('should save an object to localStorage', () => {
     const key = 'testKey';
-    const value = { foo: 'bar' };
+    const value = { test: 'test' };
 
     save(key, value);
 
-    expect(localStorage.setItem).toHaveBeenCalledWith(key, JSON.stringify(value));
+    expect(setItemSpy).toHaveBeenCalledWith(key, JSON.stringify(value));
   });
 });
