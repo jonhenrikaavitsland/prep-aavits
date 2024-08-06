@@ -11,7 +11,12 @@
       "env": { "jest": true },
       "plugins": ["jest"],
       "extends": ["plugin:jest/recommended"],
-      "rules": { "jest/prefer-expect-assertions": "off" }
+      "rules": {
+        "jest/prefer-expect-assertions": "off",
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "off",
+        "jest/no-test-prefixes": "off"
+      }
     },
     {
       "files": ["**/*.cy.js", "**/*.js"],

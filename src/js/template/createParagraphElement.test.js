@@ -4,7 +4,7 @@
 
 import { createParagraphElement } from './createParagraphElement.js';
 
-describe('createParagraphElement', () => {
+describe.only('createParagraphElement', () => {
   it('should create a paragraph element', () => {
     const paragraph = createParagraphElement('Hello, World!');
     expect(paragraph).toBeInstanceOf(HTMLParagraphElement);
